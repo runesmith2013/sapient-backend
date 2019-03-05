@@ -5,7 +5,6 @@ import com.example.demo.model.CreditCardDetails;
 import com.example.demo.repository.CreditCardRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,6 +88,10 @@ public class CreditCardControllerTest {
 
 
 
+    //TODO: Test validation on name, card number length
+    //TODO: Test edge cases: null, negative, empty string etc
+    //TODO: Test system failure cases: database unresponsive etc
+
 
 
 
@@ -98,11 +101,6 @@ public class CreditCardControllerTest {
         return mapper.writeValueAsString(details);
 
     }
-
-
-
-
-
 
 
 }
